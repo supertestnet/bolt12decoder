@@ -3,8 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <title>Getting Started</title>
+    <script src="https://supertestnet.github.io/bolt12decoder/bolt12decoder.js"></script>
   </head>
   <body>
-    <script src="https://supertestnet.github.io/bolt12decoder/bolt12decoder.js"></script>
+    <h1>Bolt12 Decoder</h1>
+    <p>Open your browser console to see an example</p>
+    <script>
+      var offer = 'lno1pg7y7s69g98zq5rp09hh2arnypnx7u3qvf3nzutywguhsuntw3ckcmtxvajrxe34v94h2mt8wymkkvpkd3shqutw8qekvvmrd4u3vggr2cfmtpqalhtlg8dvajkt9f8vcc9u0w603ze6x30kvp0mgm8um2cq';
+      var invoice = 'lni1qqgfzpdtfa9m73aqsg9l5433gcjrkz3ufap52s2wypgxz7t0w468xgrxdaezqcnrx9ckgu3e0pexkar3d3kkvemyxdnr2cttw4kkwufhdvcrvmrpwpckuwpnvcekxmtezcssx4snkkzpmlwh7sw6em9vk2jwe3stc7a5lz9n5dzlvczlk3k0ek4s2gzqg8nfkpvzzqueejlv9esvac7ujkw068f9mx44hh8rcgd5zxpwu8v3hypmn2uvtwsfsq6kzw6cg80a6l6pmt8v4je2fmxxp0rmknugkw35tanqt76xelx6kqp8xr9hmflcxrc36ut2576z4p7dej4dusy6qt47ru4tva73hxaw0hgpqgclkhx9mdqdjax07twtzeueds8xv3l4wh323l3xys5uz270ntp6vqpjwhfx8mhnr4kaztdj6xwlsfsjgw6p654h4lmdef7c7xrt6rnvs74jjsc5wtd8c08phdksap2ece763dwv5gwqqqqqqqqqqqqqqqfqqqqqqqqqqqqqr5jt9hav2gqqqqqq5szxsh6ykk5zq50xa8x8928rcjcufjxgk7mhrvq8x87vjrzgk6fh0pm3lwktrw774gzqg8nfkzhqxqsqqzczzq6kzw6cg80a6l6pmt8v4je2fmxxp0rmknugkw35tanqt76xelx6krcypc5sd9n3a2zzh9w8qgn03zeyvugmgwarl25hulve4frsedqc9nlrfg6r9k0qg95w0n8g8krzm8r88exw5tfqdcnp8d70skt36w28ajqq';
+      console.log( 'here is a bolt12 offer:' );
+      console.log( offer );
+      console.log( 'here it is, decoded:' );
+      console.log( JSON.stringify( bolt12decoder( offer ), null, 4 ) );
+      console.log( 'here is a bolt12 invoice:' );
+      console.log( offer );
+      console.log( 'here it is, decoded:' );
+      console.log( JSON.stringify( bolt12decoder( invoice ), null, 4 ) );
+    </script>
   </body>
 </html>
